@@ -1,4 +1,4 @@
-
+<div class="container">
 <form #form="ngForm" (ngSubmit)="submit(form)" class="example-form">
   <mat-error *ngIf="isvalid==false">Invalid Credentials</mat-error>
   <p>
@@ -13,5 +13,7 @@
   </mat-form-field>
   </p>
   <span class="flex-spacer"></span>
-  <button mat-button type="submit" class="background-primary text-floral-white" [disabled]="form.form.invalid">Submit</button>
+  <button mat-button type="submit" class="my-button text-floral-white" [disabled]="form.form.invalid">Submit</button>
 </form>
+
+</div>

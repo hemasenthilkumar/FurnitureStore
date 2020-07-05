@@ -1,11 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import 'variables';
+@import '../node_modules/font-awesome/scss/font-awesome';
+
 
 // some basic resets 
 
 body { 
-  padding: 100px; 
-  margin: 10px; 
+  padding: 0px; 
+  margin: 0px; 
   font-family: Roboto, sans-serif; 
 }
 .example-form {
@@ -19,7 +22,7 @@ body {
   }
 .container
 {
-    margin:20px;
+    margin:30px;
     display:flex;
 }
 
@@ -50,6 +53,11 @@ $divider-color:        #BDBDBD;
   }
 .text-floral-white {
     color: floralwhite!important;
+}
+
+.my-button
+{
+  background-color:#07716B;
 }
 
 .flex-spacer {
