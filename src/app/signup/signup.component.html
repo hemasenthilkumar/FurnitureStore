@@ -1,0 +1,18 @@
+<form [formGroup]="signupform" (ngSubmit)="onsubmit()">
+    <mat-error *ngIf="signupform.errors?.notequal">Password is not matching!</mat-error>
+    <p>
+        <mat-form-field>
+            <input matInput formControlName="username" placeholder="User Name" type="text" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput formControlName="password" placeholder="Password" type="text" required>
+          </mat-form-field>
+          <br>
+          <mat-form-field>
+            <input matInput formControlName="confirmpassword" placeholder="Confirm Password" type="text" required>
+          </mat-form-field>
+    </p>
+
+    <button type="submit" mat-button class="background-primary text-floral-white">Signup</button>
+</form>
