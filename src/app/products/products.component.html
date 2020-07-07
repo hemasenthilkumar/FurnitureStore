@@ -1,0 +1,67 @@
+<h2>Cots and Cushions</h2>
+
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="50px"
+     fxLayoutGap.xs="10px">
+
+  <mat-card >
+  <div *ngFor="let p of product" fxFlex="100%">
+  <mat-card-header>
+      <mat-card-title><h3><i>{{p.bname}}</i></h3></mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="/assets/images/{{p.bid}}.jpg" alt={{p.bname}}>
+  <mat-card-content>
+    <p>
+      About:{{p.description}}
+    </p>
+    <p>
+      Price:{{p.price|currency}}
+    </p>
+    <p>
+      <!-- Rating:{{p.rating}} -->
+      <star-rating value={{p.rating}} totalstars="5" checkedcolor="blue" uncheckedcolor="black" size="24px" readonly="true"></star-rating>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">ADD TO CART</button>
+    <button mat-raised-button color="accent">BUY NOW</button>
+  </mat-card-actions>
+  </div>
+</mat-card>
+</div>
+<h2>Dining Tables</h2>
+<div class="container"
+     fxLayout
+     fxLayout.xs="column"
+     fxLayoutAlign="center"
+     fxLayoutGap="50px"
+     fxLayoutGap.xs="10px">
+
+  <mat-card >
+  <div *ngFor="let d of dining" fxFlex="100%">
+  <mat-card-header>
+      <mat-card-title><h3><i>{{d.bname}}</i></h3></mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="/assets/images/{{d.bid}}.jpg" alt={{d.bname}}>
+  <mat-card-content>
+    <p>
+      About:{{d.description}}
+    </p>
+    <p>
+      Price:{{d.price|currency}}
+    </p>
+    <p>
+      <star-rating value={{d.rating}} totalstars="5" checkedcolor="blue" uncheckedcolor="black" size="24px" readonly="true"></star-rating>
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary">ADD TO CART</button>
+    <button mat-raised-button color="accent">BUY NOW</button>
+  </mat-card-actions>
+  </div>
+</mat-card>
+</div>
+

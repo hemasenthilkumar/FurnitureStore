@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import 'hammerjs';
+import {RatingModule} from 'ng-starrating';
 import {MatListModule} from '@angular/material/list';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatCardModule} from '@angular/material/card';
@@ -24,6 +25,7 @@ import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { StartComponent } from './start/start.component';
+import { ProductsComponent } from './products/products.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,8 @@ import { StartComponent } from './start/start.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    StartComponent
+    StartComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -52,12 +55,14 @@ import { StartComponent } from './start/start.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
+    RatingModule,
     RouterModule.forRoot([
       {path:'start',component:StartComponent},
       {path:'',component:LoginComponent},
       {path:'login',component:LoginComponent},
       {path:'home',component:HomeComponent},
-      {path:'signup',component:SignupComponent}
+      {path:'signup',component:SignupComponent},
+      {path:'furniture',component:ProductsComponent}
     ])
   ],
   providers: [LoginWsService],
